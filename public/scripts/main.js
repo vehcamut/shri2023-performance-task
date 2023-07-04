@@ -179,9 +179,9 @@ const TABS = {
     }]
   }
 };
-for (let i = 0; i < 6; ++i) {
-  TABS.all.items = [...TABS.all.items, ...TABS.all.items];
-}
+// for (let i = 0; i < 6; ++i) {
+//     TABS.all.items = [...TABS.all.items, ...TABS.all.items];
+// }
 const TABS_KEYS = Object.keys(TABS);
 function Main() {
   const ref = React.useRef();
@@ -349,7 +349,16 @@ function Main() {
     onClick: onArrowCLick
   }))));
 }
-setTimeout(() => {
-  const root = ReactDOM.createRoot(document.getElementById('app'));
-  root.render( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement(Main, null)));
-}, 100);
+
+// setTimeout(() => {
+//     const root = ReactDOM.createRoot(document.getElementById('app'));
+//     root.render(
+//         <>
+//             <Header />
+//             <Main />
+//         </>
+//     );
+// }, 100);
+
+const root = ReactDOM.createRoot(document.getElementById('app'));
+root.render( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement(Main, null)));
